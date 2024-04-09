@@ -1,25 +1,31 @@
 import React from "react";
+import logo from "../assets/click.svg";
 
-const Project = ({ item }) => {
-  const { projectName, title, description } = item;
+const Project = ({ item, index, size }) => {
+  const { projectName, title, description, image } = item;
+  console.log(size);
   return (
-    <div className="flex gap-12 w-[89%] m-auto justify-between">
-      <div className="w-[35%] flex flex-col gap-8 ">
-        <h1 className="text-xl leading-[24px] font-semibold">{projectName}</h1>
-        <p className="text-lg leading-[21px] text-[#181717]">{title}</p>
-        <p className="text-base text-[#606060]">{description}</p>
-        <a className="" href="/">
-          Source file
-        </a>
+    <>
+      {index !== 0 ? <hr className="bg-black h-[2px] w-[89%] m-auto" /> : ""}
+      <div className="flex gap-12 w-[89%] m-auto justify-between">
+        <div className="w-[35%] flex flex-col gap-8 ">
+          <h1 className="text-xl leading-[24px] font-semibold">
+            {projectName}
+          </h1>
+          <p className="text-lg leading-[21px] text-[#181717]">{title}</p>
+          <p className="text-base text-[#606060]">{description}</p>
+          <a className="mt-16 underline" href="/">
+            Source file ↗
+          </a>
+        </div>
+        <div className="relative">
+          <a href="/">
+            <img src={logo} alt="logo" className="absolute arrow-logo" />
+          </a>
+          <img className="w-[600px] project-img " src={image} alt="images" />
+        </div>
       </div>
-      <div>
-        <img
-          className="w-[600px]"
-          src="https://www.shutterstock.com/shutterstock/photos/2128036841/display_1500/stock-vector--s-retro-vaporwave-aesthetics-digital-screen-user-interface-cute-old-computer-ui-elements-2128036841.jpg"
-          alt="images"
-        />
-      </div>
-    </div>
+    </>
   );
 };
 
