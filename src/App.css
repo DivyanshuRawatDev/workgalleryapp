@@ -1,5 +1,12 @@
 .intro-logo {
   right: -100px;
   bottom: -120px;
-  
+}
+
+.more-project-image {
+  border-radius: 40px;
+}
+
+.more-pro-logo {
+  bottom: -120px;
 }

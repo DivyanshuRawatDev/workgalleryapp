@@ -3,7 +3,7 @@ import logo from "../assets/intro-logo.svg";
 
 const Intro = () => {
   return (
-    <div className="flex justify-around mt-[6%] items-center relative">
+    <div className="flex justify-around mt-[6%] items-center relative w-[98%]">
       <img src={logo} className="absolute intro-logo" alt="logo" />
       <div className="m-0">
         <h1 className="text-[#181717] text-6xl w-[40%] font-medium leading-[76px] ml-16">

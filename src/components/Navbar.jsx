@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/logo.svg";
+
 const Navbar = () => {
   return (
     <div className="flex justify-between mr-6 items-center">
